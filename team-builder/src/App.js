@@ -12,8 +12,11 @@ function App() {
 
   const addMem = (name, email, role) => {
     // exisiting = existing piece of state
-    setTeamMembers(existing => [...existing, {name: name, email: email, role: role}])
-  } 
+    setTeamMembers(existing => [
+      ...existing,
+      { name: name, email: email, role: role }
+    ]);
+  };
 
   return (
     <>
@@ -22,7 +25,7 @@ function App() {
           <Member teamMember={member} />
         ))}
       </div>
-      <Form addMem = {addMem}/>
+      <Form addMem={addMem} />
     </>
   );
 }
